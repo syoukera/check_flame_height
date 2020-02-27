@@ -38,7 +38,7 @@ for i ,file in enumerate(files):
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     img_blue = img[:, :, 2]
 
-    iy_center += np.argmax(img_blue[ix_center, :])
+    iy_center += np.argmax(img_blue[:, ix_center])
     cnt += 1
 
 iy_center /= cnt
